@@ -36,7 +36,12 @@ class AlarmReceiver: BroadcastReceiver() {
             context,
             NotificationManager::class.java
         ) as NotificationManager
-        notificationManager.sendNotification(context.getText(R.string.eggs_ready).toString(), context)
+
+        notificationManager.sendNotification(
+            context.getText(R.string.eggs_ready).toString(),
+            context
+        )
+
     }
 
 }

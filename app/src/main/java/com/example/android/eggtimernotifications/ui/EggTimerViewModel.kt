@@ -111,7 +111,6 @@ class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {
     private fun startTimer(timerLengthSelection: Int) {
         _alarmOn.value?.let {
             if (!it) {
-
                 _alarmOn.value = true
                 val selectedInterval = when (timerLengthSelection) {
                     0 -> second * 10 //For testing only
