@@ -25,7 +25,7 @@ import androidx.core.content.ContextCompat
 import com.example.android.eggtimernotifications.R
 import com.example.android.eggtimernotifications.util.sendNotification
 
-class AlarmReceiver: BroadcastReceiver() {
+class AlarmReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         // DONE: Step 1.10 [Optional] remove toast
@@ -40,7 +40,5 @@ class AlarmReceiver: BroadcastReceiver() {
             context.getString(R.string.eggs_ready),
             context
         )
-
     }
-
 }

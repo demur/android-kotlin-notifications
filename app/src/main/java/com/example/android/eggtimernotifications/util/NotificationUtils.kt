@@ -35,6 +35,7 @@ private val FLAGS = 0
 /**
  * Builds and delivers the notification.
  *
+ * @param messageBody, notification text.
  * @param context, activity context.
  */
 fun NotificationManager.sendNotification(messageBody: String, applicationContext: Context) {
@@ -64,10 +65,9 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
     // Build the notification
     val builder = NotificationCompat.Builder(
         applicationContext,
+        // DONE: Step 1.8 use the new 'breakfast' notification channel
         applicationContext.getString(R.string.egg_notification_channel_id)
     )
-
-    // TODO: Step 1.8 use the new 'breakfast' notification channel
 
     // DONE: Step 1.3 set title, text and icon to builder
         .setContentTitle(applicationContext.getString(R.string.notification_title))
@@ -91,8 +91,8 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
         .setPriority(NotificationCompat.PRIORITY_HIGH)
 
     // DONE: Step 1.4 call notify
+    // Deliver the notification
     notify(NOTIFICATION_ID, builder.build())
-
 }
 
 // DONE: Step 1.14 Cancel all notifications
